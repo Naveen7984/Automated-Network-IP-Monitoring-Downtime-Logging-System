@@ -1,39 +1,65 @@
 📌 Project Description
-A Python-based real-time network monitoring system that automates the pinging of IP addresses, tracks their online/offline status, logs response times, and calculates precise downtime durations. The system continuously updates a Microsoft SQL Server database and maintains a live status dashboard, with robust error handling and Outlook-based email alert functionality.
+A Python-powered real-time IP monitoring system developed for the IT infrastructure team to detect, log, and prevent IP downtimes. The system continuously pings a predefined list of IPs, tracks their response times, logs their online/offline status into Microsoft SQL Server, and visualizes the live status using Fine BI dashboards. This allows the IT team to act proactively before any critical IP goes down, ensuring high availability of network services.
 
-In addition, this system integrates with Fine BI for real-time data visualization, allowing the IT infrastructure team to monitor live IP status dashboards. This ensures proactive management of network stability and helps prevent prolonged downtimes by taking immediate corrective actions.
+The solution is designed for 24×7 operation, runs every 10 minutes, and has been packaged as an .exe for seamless deployment.
 
-🔍 Key Features
-Real-Time Monitoring: Continuously pings multiple IP addresses at defined intervals.
+🖥️ What This Dashboard Shows (From Fine BI Screenshot)
+Live Ping Status Indicators:
 
-Downtime Calculation: Accurately computes downtime based on historical "Up" status records.
+Green light shows the number of currently active (Up) IPs.
 
-SQL Integration: Logs all ping status data into SQL Server tables (ip_ping_status, live_ping_status, PingResponse).
+Red light shows the number of inactive (Down) IPs.
 
-Auto Schema Update: Dynamically adds new IP address columns to the database schema when needed.
+The system also logs how long an IP has been down (e.g., “7 days 02:16:34”).
 
-Email Alerts: Sends automated error reports via Microsoft Outlook upon script failure.
+Real-Time IP Ping Graphs:
 
-Customizable Runtime: Easily adjustable monitoring intervals and runtime durations.
+Visualizes ping response times (in milliseconds) for each IP.
 
-Scalable Architecture: Supports adding more IPs and handles long-term logging without code changes.
+Clearly marks Timeouts in red for quick identification of failing endpoints.
 
-Executable Conversion: Script has been compiled into a .exe file for seamless deployment.
+IP Fetch Log:
 
-24×7 Operation: Runs continuously in production, executing every 10 minutes without manual intervention.
+Shows which system (identified by IP) performed the pinging for each target IP.
 
-Fine BI Integration: Real-time SQL data is visualized through Fine BI dashboards, enabling the IT Infrastructure team to monitor IP health and prevent unexpected network failures.
+Helps trace and audit monitoring responsibility.
+
+🔍 Key Contributions
+✅ Developed Python scripts that:
+
+Ping multiple IPs and log their response times.
+
+Detect and calculate real-time downtime from previous “Up” status.
+
+Automatically insert new IPs into the SQL schema when needed.
+
+Push data into three key SQL tables: ip_ping_status, live_ping_status, and PingResponse.
+
+✅ Converted the script into an .exe to ensure non-technical users (IT admins) can run it with a single click.
+
+✅ Configured the script to run in 10-minute intervals continuously 24×7 on production machines.
+
+✅ Enabled Outlook-based email alerts in case the script fails, ensuring no silent failures.
+
+✅ Integrated with Fine BI to:
+
+Display real-time dashboards of IP status.
+
+Help the IT infrastructure team monitor, analyze, and respond to issues before they escalate.
+
+Ensure high uptime of critical network services by visualizing “Timeout” and “Down” trends.
 
 🛠️ Tech Stack
 Language: Python
 
 Database: Microsoft SQL Server
 
-Libraries: pandas, pyodbc, subprocess, socket, datetime, win32com.client
+Visualization: Fine BI
+
+Libraries Used: pandas, pyodbc, subprocess, socket, datetime, win32com.client
 
 Platform: Windows (for compatibility with Outlook and the ping command)
 
-Visualization Tool: Fine BI
+Deployment: Packaged as a .exe for automated background execution
 
-Note: This is a demo version of the project, created to showcase the core functionality while adhering to confidentiality policies restricting the sharing of the original production code.
-
+⚠️ Note: This is a demo version built for portfolio purposes. Original production code is confidential and cannot be shared.
