@@ -1,29 +1,35 @@
-# Automated-Network-IP-Monitoring-Downtime-Logging-System
+📌 Project Description
+A Python-based real-time network monitoring system that automates the pinging of IP addresses, tracks their online/offline status, logs response times, and calculates precise downtime durations. The system continuously updates a Microsoft SQL Server database and maintains a live status dashboard, with robust error handling and Outlook-based email alert functionality.
 
-Project Description
-A Python-based real-time network monitoring system that automates the pinging of IP addresses, tracks their online/offline status, logs response times, and calculates downtime durations. The system continuously updates a SQL Server database and maintains a live status dashboard, with built-in error handling and Outlook-based alert notifications.
+🔍 Key Features
 
-🔍 Key Features:
-Real-Time Monitoring: Pings multiple IP addresses at defined intervals.
+Real-Time Monitoring: Continuously pings multiple IP addresses at defined intervals.
 
-Downtime Calculation: Accurately computes downtime since the last "Up" state using historical data.
+Downtime Calculation: Accurately computes downtime based on historical "Up" status records.
 
-SQL Integration: Stores all ping status logs in SQL Server tables (ip_ping_status, live_ping_status, PingResponse).
+SQL Integration: Logs all ping status data into SQL Server tables (ip_ping_status, live_ping_status, PingResponse).
 
-Auto Schema Update: Dynamically adds new IP columns if missing in the target SQL tables.
+Auto Schema Update: Dynamically adds new IP address columns to the database schema when needed.
 
-Email Alerts: Sends detailed error reports via Microsoft Outlook if any exception occurs.
+Email Alerts: Sends automated error reports via Microsoft Outlook upon script failure.
 
-Customizable Runtime: Easily adjust monitoring interval and total run time.
+Customizable Runtime: Easily adjustable monitoring intervals and runtime durations.
 
-Scalable Architecture: Designed for adding more IPs and long-term logging without code changes.
+Scalable Architecture: Supports adding more IPs and handles long-term logging without code changes.
 
-🛠️ Tech Stack:
+Executable Conversion: Script has been compiled into a .exe file for deployment.
+
+24×7 Operation: Runs continuously in production, executing every 10 minutes without manual intervention.
+
+🛠️ Tech Stack
+
 Language: Python
 
 Database: Microsoft SQL Server
 
 Libraries: pandas, pyodbc, subprocess, socket, datetime, win32com.client
 
-Platform: Windows (for Outlook and ping command compatibility)
+Platform: Windows (for compatibility with Outlook and the ping command)
+
+Note: This is a demo version of the project, created to showcase the core functionality while adhering to confidentiality policies restricting the sharing of the original production code.
 
