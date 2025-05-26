@@ -22,10 +22,10 @@ try:
 
     conn = pyodbc.connect(
         'DRIVER={ODBC Driver 17 for SQL Server};'
-        'SERVER=SVBAVM52;'
-        'DATABASE=naveen;'
-        'UID=sa;'
-        'PWD=Test@dmin;'
+        'SERVER=#####;'
+        'DATABASE=#####;'
+        'UID=######;'
+        'PWD=######;'
     )
     cursor = conn.cursor()
 
