@@ -1,8 +1,9 @@
 📌 Project Description
 A Python-based real-time network monitoring system that automates the pinging of IP addresses, tracks their online/offline status, logs response times, and calculates precise downtime durations. The system continuously updates a Microsoft SQL Server database and maintains a live status dashboard, with robust error handling and Outlook-based email alert functionality.
 
-🔍 Key Features
+In addition, this system integrates with Fine BI for real-time data visualization, allowing the IT infrastructure team to monitor live IP status dashboards. This ensures proactive management of network stability and helps prevent prolonged downtimes by taking immediate corrective actions.
 
+🔍 Key Features
 Real-Time Monitoring: Continuously pings multiple IP addresses at defined intervals.
 
 Downtime Calculation: Accurately computes downtime based on historical "Up" status records.
@@ -17,12 +18,13 @@ Customizable Runtime: Easily adjustable monitoring intervals and runtime duratio
 
 Scalable Architecture: Supports adding more IPs and handles long-term logging without code changes.
 
-Executable Conversion: Script has been compiled into a .exe file for deployment.
+Executable Conversion: Script has been compiled into a .exe file for seamless deployment.
 
 24×7 Operation: Runs continuously in production, executing every 10 minutes without manual intervention.
 
-🛠️ Tech Stack
+Fine BI Integration: Real-time SQL data is visualized through Fine BI dashboards, enabling the IT Infrastructure team to monitor IP health and prevent unexpected network failures.
 
+🛠️ Tech Stack
 Language: Python
 
 Database: Microsoft SQL Server
@@ -30,6 +32,8 @@ Database: Microsoft SQL Server
 Libraries: pandas, pyodbc, subprocess, socket, datetime, win32com.client
 
 Platform: Windows (for compatibility with Outlook and the ping command)
+
+Visualization Tool: Fine BI
 
 Note: This is a demo version of the project, created to showcase the core functionality while adhering to confidentiality policies restricting the sharing of the original production code.
 
